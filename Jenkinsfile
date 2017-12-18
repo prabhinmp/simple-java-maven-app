@@ -11,6 +11,11 @@ pipeline {
         sh 'mvn test -B'
       }
     }
+    stage('install') {
+      steps {
+        sh 'mvn install'
+      }
+    }
   }
   environment {
     JAVA_HOME = '/usr/lib/jvm/java-8-oracle/'
