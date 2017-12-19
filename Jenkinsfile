@@ -21,6 +21,11 @@ pipeline {
         sh 'mvn clean install'
       }
     }
+    stage('') {
+      steps {
+        mail(subject: 'Build complered successfully', body: 'Hi Team,  The build is ready for deployment', from: 'prabhin.mp@kpisoft.com', to: 'prabhin.mp@kpisoft.com')
+      }
+    }
   }
   environment {
     JAVA_HOME = '/usr/lib/jvm/java-8-oracle/'
