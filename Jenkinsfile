@@ -58,7 +58,7 @@ pipeline {
 	stage ('Again rest') {
             steps {
 
-                    sh 'sleep10'
+                    sh 'sleep 10'
 
             }
         }
